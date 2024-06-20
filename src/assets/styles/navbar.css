@@ -1,0 +1,238 @@
+.navbar{
+    z-index: inherit;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 645px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    position: absolute;
+    margin: 0%;
+    padding: 0%;
+    height: 80px;
+    background-color: #F6F6F4;
+}
+
+.navbar_div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: auto;
+    margin-left: 10px;
+}
+
+.navbar_landing {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: flex-end;
+    width: 90vw;
+}
+
+.navbar_left {
+    display: flex;
+    gap: 5px;
+    margin-left: 10px;
+    background-color: #FFFFFF;
+    border-radius: 32px;
+    padding: 3px 3px 2px 0px;
+}
+
+.navbar_right {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    padding: 2px 4px;
+    background-color: #FFFFFF;
+    border-radius: 32px;
+}
+
+.navbar_center {
+    display: flex;
+    width: 65vw;
+}
+
+.navbar_logo {
+    display: flex;
+    margin-left: 15px;
+}
+
+.navbar_left_auctions_button_container {
+    margin-left: -17px;
+}
+
+.navbar_right_profile_picture {
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+    border-radius: 50px;
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.15));
+}
+
+.navbar_signup_button {
+    box-sizing: content-box; 
+    font-size: 16px;
+    padding: 4px 30px 4px 24px;
+    border-radius: 32px;
+    cursor: pointer;
+    width: 92px;
+    height: 40px;
+    background-color: #272D2D;
+    color: #FFFFFF;
+    border: none;
+}
+
+.navbar_signup_button:hover{
+    background-color: #071015;
+}
+
+.navbar_black_button {
+    width: 126px;
+    height: 56px;
+    border-radius: 32px;
+    padding: 8px 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.2px;
+    color: #FFFFFF;
+    background-color: #272D2D;
+    border: none;
+}
+
+.navbar_white_button {
+    width: 126px;
+    height: 56px;
+    border-radius: 32px;
+    padding: 8px 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.2px;
+    color: #071015;
+    background-color: #FFFFFF;
+    border: none;
+}
+
+.navbar_white_button:hover {
+    cursor: pointer;
+}
+
+.navbar_icon_home {
+    position: relative;
+    top: 2px;
+    left: 28px;
+    cursor: default;
+}
+
+.navbar_icon_person {
+    position: relative;
+    top: 3px;
+    left: 30px;
+    cursor: default;
+}
+
+@media (max-width: 600px) {
+
+    .navbar_landing {
+        width: 75vw;
+    }
+
+    .navbar_signup_button{
+        border-radius: 16px;
+        width: 60px;
+    }
+
+    .navbar_center {
+        display: none;
+    }
+
+    .navbar_logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .navbar_right {
+        width: 96px;
+        height: 48px;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 0;
+        margin-left: 105px;
+    }
+
+    .navbar_right_create_auction_picture, .navbar_right_profile_picture {
+        width: 40px;
+        height: 40px;
+    }
+
+    .navbar_left {
+        gap: 0;
+        width: 96px;
+        height: 48px;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 1px 3px 1px 0;
+    }
+
+    .navbar_black_button {
+        font-size: 0px;
+        width: 40px;
+        height: 40px;
+        margin-left: -8px;
+    }
+
+    .navbar_white_button {
+        font-size: 0px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .navbar_left_auctions_button_container {
+        margin-left: -8px;
+    }
+    
+    .navbar_left_profile_button_container {
+        margin-left: -8px;
+    }
+
+    .navbar_icon_person {
+        top: 6px;
+        left: 20px;
+    }
+
+    .navbar_icon_home {
+        top: 7px;
+        left: 22px;
+    }
+
+}
+
+@media (max-width: 1500px) {
+
+    .navbar_center {
+        width: 55vw;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .navbar_center {
+        width: 40vw;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .navbar_center {
+        width: 30vw;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .navbar_center {
+        width: 10vw;
+    }
+}

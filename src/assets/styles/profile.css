@@ -1,0 +1,269 @@
+.profile_container {
+    margin: 0px 30px;
+    background-color: #F6F6F4;
+}
+
+.profile_header {
+    margin-top: 100px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38.4px;
+    color: #000000;
+}
+
+.profile_button_container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.profile_auctions_button_container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 10px;
+    height: 40px;
+}
+
+.profile_black_button {
+    font-weight: 500;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #272D2D;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    height: 40px;
+    width: 126px;
+}
+
+.profile_black_button:hover {
+    background-color: #071015;
+    cursor: default;
+}
+
+.profile_white_button {
+    font-weight: 500;
+    font-size: 16px;
+    color: #071015;
+    background-color: #EDF4F2;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    height: 40px;
+    width: 126px;
+}
+
+.profile_white_button:hover {
+    background-color: #aaaaaa;
+}
+
+.profile_auctions_delete_button {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #071015;
+    background-color: #FFFFFF;
+    padding: 8px 16px;
+    border: #272D2D 1px solid;
+    border-radius: 16px;
+    cursor: pointer;
+    height: 40px;
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile_auctions_delete_button:hover {
+    background-color: #aaaaaa;
+}
+
+.profile_auctions_edit_button {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    background-color: #272D2D;
+    padding: 8px 16px;
+    border: #272D2D 1px solid;
+    border-radius: 16px;
+    cursor: pointer;
+    height: 40px;
+    width: 156px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.profile_auctions_edit_button:hover {
+    background-color: #071015;
+}
+
+.profile_subheader_container {
+    width: 292px;
+    text-align: center;
+    margin-left: 40vw;
+    margin-top: 30vh;
+}
+
+.profile_subheader {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 31.2px;
+    color: #071015;
+}
+
+.profile_subheader_text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: #74817F;
+}
+
+.profile_grid {
+    display: grid;
+    align-items: start;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.25rem;
+}
+
+
+.profile_auctions_card {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+}
+
+.profile_auctions_content {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 5px;
+}
+
+.profile_auctions_status_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile_auctions_status {
+    padding: 2px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    padding: 4px 10px;
+    height: 12px;
+    width: max-content;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 12px;
+    color: #071015;
+}
+
+.profile_auctions_time_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 4px;
+    border-radius: 16px;
+    padding: 4px 10px;
+    height: 12px;
+}
+
+.red-background {
+    background-color: #FF897E;
+}
+
+.profile_auctions_time {
+    margin: 0;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 12px;
+    color: #071015;
+}
+
+.profile_auctions_title {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: #071015;
+}
+
+.profile_auctions_price {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #071015;
+    margin: 0;
+}
+
+.profile_auctions_image_container {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.profile_auctions_image {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 12px;
+    object-fit: cover;
+    min-height: 200px;
+}
+
+.yellow-background {
+    background-color: #F9FF90;
+}
+
+.black-background {
+    background-color: #272D2D;
+    color: #FFFFFF;
+}
+
+@media (max-width: 600px) {
+
+    .profile_subheader_container {
+        margin-left: 8vw;
+        margin-top: 20vh;
+    }
+
+    .profile_button_container {
+        width: 360px;
+        height: 48px;
+    }
+
+    .profile_grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile_auctions_edit_button {
+        width: 268px;
+    }
+
+    .profile_auctions_image {
+        object-fit: contain;
+        max-width: 320px;
+        max-height: 150px;
+        min-height: 150px;
+    }
+
+    .profile_auctions_title {
+        margin: 5px 0;
+    }
+
+    .profile_auctions_status {
+        margin-bottom: 0;
+    }
+
+    .profile_auctions_time_container {
+        margin-top: 10px;
+    }
+  
+  }
