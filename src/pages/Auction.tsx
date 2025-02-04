@@ -133,13 +133,19 @@ const Auction = () => {
           }
         if(auction?.user_id === user.user_id) {
             setErrorMessage("You can't bid on your own auction!")
-        } else {
+            return
+        }
         try {
             await PostRequest(`bids/auctions/${auctionId}/bid`, bidData);
             window.location.reload();
-        } catch(error) {
+        } catch(error: any) {
             console.error("Error submitting bid:", error);
-        }
+
+            if (error.response && error.response.data && error.response.data.message) {
+                setErrorMessage(error.response.data.message);
+            } else {
+                setErrorMessage('An unexpected error occurred. Please try again.');
+            }
         }
     }
 

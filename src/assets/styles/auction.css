@@ -125,7 +125,8 @@
 }
 
 .auction_bids_container {
-    height: 44.3vh;
+    min-height: 43.7vh;
+    height: fit-content;
     background-color: #FFFFFF;
     border-radius: 16px;
     padding: 10px;

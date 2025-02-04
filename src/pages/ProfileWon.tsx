@@ -57,10 +57,9 @@ const ProfileWon = () => {
     <div className='profile_subheader_container'>
       <h2 className='profile_subheader'>Nothing here yet?</h2>
       <p className='profile_subheader_text'>
-        When you win auction items <br/>
-        will be displayed here! Go on <br/>
-        and bid on your favorite <br />
-        items!
+        When you win an auction, your items
+        will be displayed here! 
+        Start bidding by finding new items you like on the "Auctions" page!
       </p>
     </div>
     )
@@ -91,7 +90,7 @@ const ProfileWon = () => {
 
   return (
     <div className='profile_container'>
-      <h1 className='profile_header'>Hello {user.firstName}  {user.lastName} !</h1>
+      <h1 className='profile_header'>Hi, {user.firstName}  {user.lastName}</h1>
       <div className='profile_button_container'>
         <NavLink to={`/profile/myauctions`}>
           <button className='profile_white_button'>My Auctions</button>

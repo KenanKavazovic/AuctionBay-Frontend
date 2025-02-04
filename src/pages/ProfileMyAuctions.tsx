@@ -70,9 +70,8 @@ const ProfileMyAuctions = () => {
     <div className='profile_subheader_container'>
       <h2 className='profile_subheader'>Oh no, no auctions added!</h2>
       <p className='profile_subheader_text'>
-        To add new auction click "+" button in <br/>
-        navigation bar and new auctions will be <br/>
-        added here!
+        To add a new auction, click the "+" button in
+        the navigation bar and new auctions will be added here!
       </p>
     </div>
     )
@@ -133,7 +132,7 @@ const ProfileMyAuctions = () => {
 
   return (
     <div className='profile_container'>
-      <h1 className='profile_header'>Hello {user.firstName}  {user.lastName} !</h1>
+      <h1 className='profile_header'>Hi, {user.firstName}  {user.lastName}</h1>
       <div className='profile_button_container'>
         <NavLink to={`#`}>
           <button className='profile_black_button'>My Auctions</button>

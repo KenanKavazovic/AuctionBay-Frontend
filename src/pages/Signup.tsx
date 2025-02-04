@@ -20,7 +20,7 @@ function Signup() {
     const submit = handleSubmit(async (data, event)=> {
           event?.preventDefault()
           const response = await PostRequest("auth/signup",data)
-          await setMessage(response.response?.data?.message || "")
+          await setMessage(response.data?.message || "")
         }
     )
 

@@ -97,15 +97,22 @@ const ProfileBidding = () => {
     <div className='profile_subheader_container'>
       <h2 className='profile_subheader'>No bidding in progress!</h2>
       <p className='profile_subheader_text'>
-        Start bidding by finding new items for you <br/>
-        like on "Auction" page!
+        Start bidding by finding new items you
+        like on the "Auctions" page!
       </p>
     </div>
     )
   }
   
   const renderAuctions = () => {
-    return bids.map((bid: any) => {
+    const uniqueAuctionsMap = new Map();
+    bids.forEach((bid: any) => {
+        if (!uniqueAuctionsMap.has(bid.Auction.auction_id)) {
+            uniqueAuctionsMap.set(bid.Auction.auction_id, bid);
+        }
+    });
+    const uniqueBids = Array.from(uniqueAuctionsMap.values());
+    return uniqueBids.map((bid: any) => {
       const auctionImage = bidImages[bid.auction_id] || null;
 
       const endTime = new Date(bid.Auction.endedAt).getTime();
@@ -151,7 +158,7 @@ const ProfileBidding = () => {
 
   return (
     <div className='profile_container'>
-      <h1 className='profile_header'>Hello {user.firstName}  {user.lastName} !</h1>
+      <h1 className='profile_header'>Hi, {user.firstName}  {user.lastName}</h1>
       <div className='profile_button_container'>
         <NavLink to={`/profile/myauctions`}>
           <button className='profile_white_button'>My Auctions</button>

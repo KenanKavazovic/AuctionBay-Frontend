@@ -96,8 +96,8 @@ const Auctions = () => {
     return  (
     <div className='auctions_subheader_container'>
       <h2 className='auctions_subheader'>Oh no, no auctions yet!</h2>
-      <p className='auctions_subheader_text'>To add new auction click "+" button in <br/>
-         navigation bar or wait for other users <br/>
+      <p className='auctions_subheader_text'>To add a new auction, click the "+" button in
+         the navigation bar or wait for other users
          to add new auctions.</p>
     </div>
     )

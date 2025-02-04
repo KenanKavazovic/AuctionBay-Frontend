@@ -23,8 +23,17 @@ function Login(){
     
   const submit = handleSubmit(async (data, event) => {
     event?.preventDefault()
-    const response = await PostRequest("auth/login", data)
-    await setMessage(response.response?.data?.message || "")
+    try {
+      const response = await PostRequest("auth/login", data);
+      await setMessage(response.data?.message || "");
+    } catch (error: any) {
+      if (error.response) {
+        setMessage(error.response.data.message);
+      } else {
+        setMessage('An unexpected error occurred.');
+      }
+    }
+    
   })
 
   useEffect(() => {

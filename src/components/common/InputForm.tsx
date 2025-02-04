@@ -1,7 +1,22 @@
 import styled from "styled-components";
 import React, { ChangeEventHandler, FocusEventHandler, KeyboardEventHandler } from 'react';
 
-const Input: React.FC<{height?: string, sp?: string, className?: string, width?: string, border?: string, fg?: string, bg?: string, pd?: boolean, type: string, value?: string, onChange?: ChangeEventHandler<HTMLInputElement>, onBlur?: FocusEventHandler<HTMLInputElement>, name?: string, register?: any, onKeyDown?: KeyboardEventHandler<HTMLInputElement>;
+const Input: React.FC<{
+  height?: string, 
+  sp?: string, 
+  className?: string, 
+  width?: string, 
+  border?: string, 
+  fg?: string, 
+  bg?: string, 
+  pd?: boolean, 
+  type: string, 
+  value?: string, 
+  onChange?: ChangeEventHandler<HTMLInputElement>, 
+  onBlur?: FocusEventHandler<HTMLInputElement>, 
+  name?: string, 
+  register?: any, 
+  onKeyDown?: KeyboardEventHandler<HTMLInputElement>;
 }> = ({height, width, sp, border, fg, bg, pd, type, className, register, name, value, onChange, onKeyDown,}) => {
   return (register ?
     <input {...register(name)} defaultValue={value} className={className} onChange={onChange} type={type || "text"} onKeyDown={onKeyDown} />

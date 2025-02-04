@@ -22,6 +22,9 @@ const EditAuction: React.FC<EditAuctionProps> = ({auctionId, title, description,
   const [preview, setPreview] = useState<string | null>(null)
   const [auctionImage, setAuctionImage] = useState<string | null>(null)
 
+  const tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
@@ -154,6 +157,7 @@ const EditAuction: React.FC<EditAuctionProps> = ({auctionId, title, description,
           dateFormat="dd.MM.yyyy"
           placeholderText="dd.mm.yyyy"
           showTimeInput
+          minDate={tomorrow}
         />
         <img className='popup_edit_time_icon' src={Time} alt="" />
       </div>
